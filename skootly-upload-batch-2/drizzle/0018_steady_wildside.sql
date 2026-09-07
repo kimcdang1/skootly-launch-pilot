@@ -1,0 +1,1 @@
+ALTER TABLE `launch_checkouts` ADD CONSTRAINT `launch_checkout_user_pack_unique` UNIQUE(`userId`,`packId`);
