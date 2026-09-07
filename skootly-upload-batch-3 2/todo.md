@@ -1,0 +1,263 @@
+# Project TODO
+
+- [x] Resolve the user-reported issue that accumulated guided journey, Creator Pack, Freight action-engine, private conversation, and Smart Escalation changes are not visible in the last published release.
+- [x] Visually verify the redesigned student and creator experiences on desktop and mobile, save a new checkpoint, and confirm the live custom domain serves the updated release.
+
+- [x] Create an original Skootly brand system with a playful wordmark, soft peach foundation, mint/lilac/yellow Memphis accents, rounded UI, bold black typography, and restrained illustration-like decorations.
+- [x] Build a responsive public landing page that explains Skootly’s focused-execution promise and routes visitors to sign in or start a daily check-in.
+- [x] Preserve secure Manus authentication and give each signed-in user a private workspace isolated by user ID.
+- [x] Create persistent database tables for daily check-ins, recommended actions, and action outcomes/completion status.
+- [x] Build a short daily check-in covering current goal, blocker, available time, energy level, metric context, and optional notes.
+- [x] Integrate the built-in LLM with structured output to create one empathetic primary action, an optional secondary action, concise rationale, a bottleneck diagnosis, and up to three “Not Today” distractions.
+- [x] Enforce the product rule of no more than one bottleneck, two active Skoots, and three “Not Today” items.
+- [x] Build a calm daily focus workspace with goal context, one primary Skoot, an optional secondary Skoot, rationale, impact, and completion/skip controls.
+- [x] Collect a lightweight outcome after completion, including outcome type, optional note, and optional revenue/result amount.
+- [x] Persist unfinished actions and display recent momentum in a simple history timeline without complex analytics.
+- [x] Add concise in-app guidance for collaborating with Aaron through a shared GitHub repository while continuing to build with Manus.
+- [x] Add concise in-app guidance for publishing through Manus hosting and connecting skootly.com with Namecheap DNS.
+- [x] Add loading, empty, success, and error states for all core authenticated flows.
+- [x] Add Vitest coverage for recommendation validation, data isolation contracts, and core action state transitions.
+- [x] Verify TypeScript, tests, production build, dev logs, desktop layout, and mobile responsiveness.
+- [x] Save one final project checkpoint and provide the user with publishing and collaboration next steps.
+- [x] Reframe the root route as a neutral validation landing page that links to the independent Founder, Coach, and Client Success experiments.
+- [x] Create a reusable experiment configuration layer separating positioning, onboarding questions, terminology, recommendation rules, landing content, and demo fixtures from shared infrastructure.
+- [x] Build the Founder experiment at `/founder` around revenue, cash flow, opportunities, projects, constraints, and distraction protection.
+- [x] Build the Coach experiment at `/coach` around client outcomes, milestones, methodology context, progress updates, and the right next client action.
+- [x] Build the Client Success experiment at `/client-success` around client prioritization, risk, bottlenecks, and recommended interventions.
+- [x] Use clearly labeled fictional sample records only in the Client Success demo; do not create fake reviews, ratings, testimonials, or social proof.
+- [x] Extend the shared recommendation engine to ask exactly one high-value clarifying question when context is insufficient instead of inventing an answer.
+- [x] Extend structured outcome capture to include retained-client outcomes, measurable results, and optional user feedback.
+- [x] Create founder-only `/lab` access with experiment cards, open demo, reset demo, and copy demo URL actions.
+- [x] Add persistent validation feedback capture for interviewee name, experiment viewed, perceived purpose, use intent, payment intent, suggested monthly price, most interesting feature, confusion, and notes.
+- [x] Add lightweight validation totals per experiment for demos, definite use intent, payment intent, and average suggested price.
+- [x] Track landing page views, onboarding starts/completions, Skoot generation/completion/skip, outcome reporting, signup starts/completions, and feedback recording with `experiment_version` on every event.
+- [x] Document the extension contract so a future Version D can be added without rewriting shared authentication, UI primitives, decision logic, or outcome tracking.
+- [x] Verify the connected GitHub account and determine whether an existing Skootly repository should be used before creating or pushing any remote repository.
+- [x] Keep the completed Skootly source in one private shared GitHub repository suitable for inviting Aaron as a collaborator.
+- [x] Refine the supplied Freight to Freedom action-engine brief into a minimal implementation specification that reuses existing Skootly actions, outcomes, HighLevel context, and visual components.
+- [x] Create a reusable company profile for company name, primary goal, monthly revenue goal, offer, offer price, acquisition method, notes, current bottleneck, and optional default playbook.
+- [x] Introduce a reusable business action model with company assignment, source signal, priority score, revenue opportunity, related HighLevel contacts/URLs, owner, lifecycle status, outcome, outcome value, learning note, and optional playbook origin.
+- [x] Build deterministic signal filters and scoring for new/stale/follow-up-needed leads, webinar cohorts when explicitly identifiable, opportunities, pipeline stages, last activity, and opportunity values without mirroring the CRM database.
+- [x] Create a server-owned `generateNextActions` service that returns and persists no more than two actions, prioritizing urgency, revenue opportunity, and conversion likelihood from compact normalized signals.
+- [x] Preserve existing user-owned HighLevel OAuth context; treat the current private integration token only as an optional founder test path and never expose any token in browser code.
+- [x] Add compact business memory and conversation context so Skoot can explain the top action, record a status/owner update, and log a result without replaying full CRM or chat history.
+- [x] Extend outcome capture to store contacted, replied, booked, purchased, generated-revenue, outcome value, and learning notes as a signal-to-action-to-result record.
+- [x] Add a default internal playbook identifier without creating a marketplace, billing, public Drops, or other playbook UI.
+- [x] Build `/freight-to-freedom` as a focused client workspace with “Good morning. Here’s where the money is today,” one dominant action, an optional supporting action, a small goal/bottleneck/recent-wins panel, and direct authorized lead links.
+- [x] Expose clean server-side action boundaries for future `get_next_actions`, `get_action_details`, `complete_action`, `record_action_outcome`, and `get_business_snapshot` tools without building the external ChatGPT/MCP connection yet.
+- [x] Add tests for deterministic priority order, action cap, tenant/company isolation, HighLevel signal compactness, action lifecycle transitions, and detailed outcome persistence.
+- [x] Verify the Freight to Freedom workspace supports the five-second decision test without becoming a CRM dashboard or redesigning the current Skootly brand.
+- [x] Reconcile Freight to Freedom’s earlier three-action brief with Skootly’s authoritative one-to-two-action product rule, preserving only an optional secondary action.
+- [x] Enforce a maximum of two active business actions in the deterministic action engine, server query, and Freight to Freedom UI.
+- [x] Update all Freight copy, counts, tests, and action-engine documentation from “one to three” to “one primary move and one optional supporting move.”
+- [x] Evaluate Vercel compatibility against the project’s Manus authentication, managed database, and built-in LLM dependencies before selecting the custom-domain hosting path.
+- [x] Prepare skootly.com and www.skootly.com custom-domain records for Namecheap, preserving email or other existing DNS records.
+- [x] Require explicit confirmation before changing live DNS records or initiating an external deployment.
+- [x] Compare direct GoHighLevel Private Integration Token access with a Pipedream intermediary and choose the lighter architecture unless workflow orchestration is required.
+- [x] Define the minimum GoHighLevel data needed for Skootly recommendations, prioritizing contacts, opportunities, pipelines, tasks, conversations, and recent activity while avoiding unnecessary data collection.
+- [x] Keep the GoHighLevel Private Integration Token server-side in managed secrets and never expose it in browser code, logs, or GitHub.
+- [x] Add a testable GoHighLevel connection status and graceful fallback when the token is missing, expired, or lacks a required scope.
+- [x] Normalize selected GoHighLevel records into concise recommendation context rather than sending raw CRM payloads to the LLM.
+- [x] Add tests for GoHighLevel authorization headers, location scoping, response normalization, error handling, and isolation from client-side code.
+- [x] Locate the user-supplied Skootly mascot image, preserve its pixel-art personality, upload it as a managed static asset, and reference only the permanent hosted URL in the app.
+- [x] Build one reusable floating mascot component shared across Founder, Coach, and Client Success routes without creating a separate mascot data system.
+- [x] Keep the mascot visible across in-app navigation, draggable on desktop when practical, safely positioned on mobile, and persistent in its minimized or expanded preference.
+- [x] Add subtle idle float, thinking pulse, completion celebration, and notification enter/exit motion with reduced-motion support and no aggressive bouncing.
+- [x] Derive mascot content from the existing current goal, bottleneck, active Skoot, completion state, outcome state, and next available Skoot.
+- [x] Add a compact mascot panel that shows “Your next move,” opens the active Skoot, directs users to answer a clarification, or offers to update context when today is complete.
+- [x] Add lightweight notification state for new Skoot, reminder, completion, outcome request, milestone complete, new bottleneck, and daily ready messages with read, dismissed, and created timestamps.
+- [x] Trigger a subtle mascot celebration and “Skoot complete. What happened?” notification before opening the existing outcome capture flow.
+- [x] Respond to logged outcomes with concise context-aware mascot copy and surface the next active Skoot when one exists.
+- [x] Add one non-intrusive idle reminder after approximately 25 minutes with a cooldown, without implementing recurring background scheduling.
+- [x] Add return-visit messaging for unfinished actions, completed prior work, and newly available Skoots using local visit state plus existing workspace data.
+- [x] Add founder-only `/lab` controls to demo new-Skoot, reminder, completion, revenue, next-bottleneck, and reset mascot states.
+- [x] Verify the mascot never covers primary navigation, CTAs, Done/Skip controls, or the mobile bottom interaction area.
+- [x] Treat the currently configured Private Integration Token only as a founder test connection and remove it from the end-user connection design.
+- [x] Implement HighLevel OAuth for production multi-tenant connections so each signed-in Skootly user authorizes their own HighLevel account instead of sharing a global token.
+- [x] Persist HighLevel account/location connections by Skootly user ID with strict tenant isolation, connection status, granted scopes, token expiry, and last successful sync metadata.
+- [x] Encrypt HighLevel access and refresh tokens at rest using a server-only encryption key, never return tokens through tRPC, and redact them from errors and logs.
+- [x] Add OAuth state/nonce validation, redirect handling, token refresh, reconnect, location selection, and disconnect/revoke behavior.
+- [x] Prevent any Skootly user from reading, refreshing, disconnecting, or using another user’s HighLevel connection.
+- [x] Update the Founder check-in to show the logged-in user’s own HighLevel connection state and selected location, with connect, refresh, and disconnect controls.
+- [x] Ensure normalized CRM snapshots and recommendation context are scoped to both the signed-in Skootly user and the selected HighLevel location.
+- [x] Add multi-tenant tests for cross-user connection denial, OAuth state validation, token encryption/redaction, location scoping, refresh behavior, and disconnected fallback.
+- [x] Determine that even user-initiated Skool page scraping conflicts with Skool’s current platform policy, which explicitly prohibits scraping data and automation requests.
+- [x] Prohibit login bypass, hidden endpoint enumeration, bulk crawling, automated community-wide scraping, and collection of private member content unrelated to the user’s learning context.
+- [x] Do not build or distribute the proposed Skool-scraping Chrome extension while the platform policy prohibits scraping and automation requests.
+- [x] Retire the extension pairing design because a direct browser scraper is not a compliant integration route under the current Skool policy.
+- [x] Create tenant-isolated database tables for user-supplied learning sources, transcript or caption text, homework items, progress, source links, consent, and deletion metadata.
+- [x] Sanitize and limit captured text, strip scripts and unnecessary member information, hash source URLs for deduplication, and reject oversized or unsupported payloads.
+- [x] Add an explicit manual import form for a lesson title, community/course name, transcript or captions the user is authorized to reuse, homework/action prompts, lesson URL, and source date.
+- [x] Add Skool context ingestion and normalization that extracts lesson concepts, required homework, platform engagement opportunities, and source citations without inventing missing transcript content.
+- [x] Ground Skootly recommendations in the signed-in user’s relevant captured lessons and unfinished homework, citing the lesson title and linking back to the authorized Skool page.
+- [x] Encourage meaningful in-platform engagement such as completing homework, posting a relevant progress update, asking a focused question, or replying to an applicable discussion without manufacturing activity.
+- [x] Add user controls to review imported lessons, mark homework progress, disable Skool grounding, and permanently delete user-supplied Skool context.
+- [x] Add tests for cross-user isolation, payload sanitization and size limits, deduplication, deletion, recommendation source attribution, and graceful missing-transcript behavior.
+- [x] Do not package or submit a Chrome extension that would violate Skool’s no-scraping platform policy.
+- [x] Document the compliant alternatives: manual transcript paste, caption-file upload, owner-provided course exports, or a future official Skool API/integration if Skool grants permission.
+- [x] Define an original Skootly logo concept built around decisive forward motion, one clear next move, and the existing warm Memphis-inspired palette without copying Skoot CRM or another mascot brand.
+- [x] Create a primary horizontal Skootly logo with a playful custom wordmark and compact symbol that remains readable on soft peach, white, and dark backgrounds.
+- [x] Create a simplified favicon/app icon using only the compact Skootly symbol, with strong silhouette and no tiny text at 16–32 px.
+- [x] Prepare transparent PNG logo assets plus favicon-compatible PNG and ICO outputs, storing originals outside the project and using permanent hosted URLs for deployed web imagery.
+- [x] Integrate the favicon into the document head and replace the text-only navigation wordmark with the approved logo while preserving accessible alt text and fast rendering.
+- [x] Verify the logo on desktop and mobile navigation, the favicon at small sizes, and sufficient contrast against the current Skootly color system.
+- [x] Deliver the final logo and favicon files to the user and save an updated project checkpoint.
+- [x] Replace the generated Skootly navigation logo with the user-supplied running-S wordmark artwork as the approved primary visual identity.
+- [x] Generate a compact square favicon from the user-supplied running-S character mark while preserving its yellow S silhouette, black limbs, blue shoes, and cheerful forward-motion personality.
+- [x] Use the approved user-supplied wordmark for site logo/social metadata and the matching square mark for browser/favicon metadata, with accessible alt text and responsive display sizing.
+- [x] Verify from the available official policy and third-party listing evidence that no SkootCRM approval or transcript-capture authorization is established; retain the documented no-scraping limitation.
+- [x] Document the difference between an officially approved or partner-authorized extension and an unapproved scraper, including exact allowed hosts, data types, user actions, and engagement restrictions.
+- [x] Retain the compliant manual import alternative because no official evidence currently supports a narrow Skool capture extension.
+- [x] Keep direct Skool extension capture disabled because no approved API or written platform authorization has been provided; retain the documented narrow constraints for any future approved path.
+- [x] Decline to implement any Skool extension behavior intended to bypass platform policies, access controls, or anti-scraping restrictions.
+- [x] Require documented official permission, a published API, or written platform/creator authorization before enabling any direct Skool browser capture or automated data retrieval.
+- [x] Define Skoot as a bounded execution companion that prioritizes the current goal, bottleneck, active Skoots, outcomes, learning context, and a concise next move rather than functioning as an unrestricted generic chatbot.
+- [x] Define explicit client consent, client ownership, private-by-default visibility, retention, deletion, and export rules for the shipped text conversation; coach/team and voice access remain disabled.
+- [x] Research and document the current ChatGPT app/connector approval path, required OAuth/security model, review expectations, and whether an MCP server is a viable alternative for Skootly.
+- [x] Research and document the current Manus integration and MCP approval path, including which user-facing access modes are available for an external Skootly service.
+- [x] Create tenant-isolated tables for the approved text-only Skoot conversation and messages; do not create memory-summary, voice, or coach-sharing records before those features are approved.
+- [x] Deliberately defer voice ingestion until a separate recording, transcript preview, consent, retention, and deletion design is approved.
+- [x] Build an in-app Skoot conversation surface with private message history grounded in current Skoots, outcomes, manually imported learning sources, and compact business context.
+- [x] Enforce conversation guardrails end-to-end: no cross-client visibility, no coach access, no automatic external posting, and no action execution outside user confirmation.
+- [x] Design an OAuth-protected external app/MCP contract with read-only context tools and explicitly confirmed write actions; provider registration remains an external setup step.
+- [x] Add tests for the shipped text-conversation consent, client isolation, bounded context, source attribution, and confirmation-gated external tool writes; voice and external OAuth runtime tests remain gated by future approval.
+- [x] Create a founder rollout checklist for external app/MCP review, privacy policy, terms, support contact, OAuth registrations, test accounts, screenshots, and staged client access.
+- [x] Define a prompt-to-next-action contract that returns exactly one primary action, optional rationale, asset requirements, source grounding, and an authorized platform destination rather than a long task list.
+- [x] Let users manually provide their own community/group URL and optionally save a validated settings/about URL template; never discover, enumerate, or infer private group administration links.
+- [x] Support structured Skoot Pack imports for authorized templates such as a 5-Day Challenge, including the stated group goal, prerequisite assets, expected dimensions, homework, and ordered milestones.
+- [x] Add an action-card type for asset preparation that can specify a requested deliverable, exact dimensions such as a 1084 × 576 group cover, and a user-owned deep link to the relevant settings page.
+- [x] Require an explicit user confirmation before any external write, upload, platform navigation that reveals private settings, or automation request; default all external guidance to read-only links and instructions.
+- [x] Ensure Skoot cites the imported Skoot Pack or user-provided context that led to an action and never claims platform state it cannot verify.
+- [x] Add example and test coverage for “Run the 5-Day Challenge Skoot Pack” producing a single cover-banner action with correct dimensions and an authorized group settings link.
+- [x] Add a source-date field to manual lesson imports across the schema, database migration, protected API, and import UI.
+- [x] Normalize imported learning sources into explicit lesson concepts, homework items, engagement opportunities, and source-attribution records without fabricating missing content.
+- [x] Surface recommendation citations with an authorized source lesson link in the focus and momentum UI whenever active learning context informs a recommendation.
+- [x] Add deterministic engagement guidance that recommends an appropriate user-authored homework completion, progress update, focused question, or discussion reply only when the imported source supports it.
+- [x] Add Vitest coverage for learning-source cross-user isolation, deduplication, deletion/audit behavior, recommendation source attribution, graceful missing-transcript handling, and size limits.
+- [x] Verify the generated ICO favicon at actual small browser-tab sizes using the live-served 16×16 and 32×32 ICO layers and a native 16-pixel silhouette inspection.
+- [x] Add a client-owned conversation model with explicit consent, user ownership, private-by-default visibility, retention controls, permanent deletion, and export-ready metadata.
+- [x] Keep the first conversation release text-only; defer voice ingestion until the user has approved a separate consent, transcription, retention, and deletion design.
+- [x] Add a clear in-app notice explaining that Skoot summarizes only the signed-in user’s Skootly data and does not post, upload, or change external platforms.
+- [x] Create an external-app rollout checklist with privacy policy, terms, support contact, OAuth registrations, test accounts, screenshots, and staged access requirements.
+- [x] Record the deployment failure as an upstream base-image retrieval timeout rather than an application build error, and retain the build log evidence.
+- [x] Retry publication after local TypeScript, tests, and production build verification succeeds, then verify that the live Skootly landing page loads successfully; browser-tab favicon inspection remains separately pending.
+- [x] Reconcile the new Creator Skoot Pack brief with existing user-owned `skoot_packs`, action-engine actions, private Skoot conversation, and outcome records without rebuilding or duplicating them.
+- [x] Add creator-owned versioned pack knowledge for principles, frameworks, diagnostic rules, decision rules, milestones, Skoot actions, scripts/templates, Not-Today rules, and examples.
+- [x] Add a creator review flow where natural-language updates become a concise proposed knowledge item with add and cancel controls before approval; inline editing remains future work.
+- [x] Preserve immutable pack version history and automatically resolve each student to the latest approved assigned pack version.
+- [x] Add a one-creator-to-many-students assignment model with explicit creator/student ownership checks and no multi-creator collaboration controls.
+- [x] Add pack attribution to student recommendations, including pack name, creator name, version, update date, and applied rule/source reference.
+- [x] Ground students’ one-primary-plus-one-optional Skoots in their goal, current state, progress, outcomes, and assigned approved pack knowledge without turning Skoot into a generic chat interface.
+- [x] Build a concise creator workspace for creating packs, proposing knowledge updates, reviewing versions, assigning students, and seeing current assignments.
+- [x] Build a minimal creator-insights view that summarizes recurring student bottlenecks, repeated questions, possible misconceptions, skipped Skoot titles, stored outcomes, and escalation requests without advanced analytics.
+- [x] Add tests for version immutability, active approved version resolution, creator/student tenant isolation, pack-attribution persistence, one-to-two-action limits, and outcome linkage.
+- [x] Explicitly exclude public Pack discovery, marketplace listing, billing, creator payouts, affiliates, royalties, multi-creator editing, complex permissions, and advanced analytics from this release.
+- [x] Reconcile Smart Escalation with the shared Skoot engine so the routing order is Student → assigned Skoot Pack/Skoot → CSM → Main Coach, always choosing the lowest-cost capable path.
+- [x] Add creator or CSM support profiles with only a display name, routing level, optional booking URL, and active state; do not build calendar infrastructure.
+- [x] Add tenant-isolated escalation records that capture student, creator, recommendation/Skoot, escalation type, routing reason, assigned helper, booking URL, lifecycle status, and created/resolved timestamps.
+- [x] Add deterministic escalation rules for persistent or explicitly human-needed bottlenecks, while leaving the ordinary one-primary-plus-one-optional Skoot flow intact when an assigned Pack can help.
+- [x] Present students with a Book Breakdown CTA only when an active, creator-owned booking URL is available; otherwise present a private request-for-help action without inventing an external link.
+- [x] Add private coach/CSM notification records with short context and deep links to only their authorized escalation view; never notify unrelated users.
+- [x] Generate a private pre-call Breakdown Brief from the student’s owned goal, state, bottleneck, beliefs, prior Skoots/outcomes, applied Pack knowledge, and recommended call focus.
+- [x] Add coach post-call notes/transcript paste with explicit private-data notice and reviewable suggestions for a client’s next Skoots and proposed Creator Pack knowledge.
+- [x] Require explicit creator approval, inline editing, or ignore before post-call learning changes any Creator Pack version.
+- [x] Detect only simple recurring, anonymized bottleneck, skipped-action, and escalation-request patterns among assigned students; surface a private Content Skoot recommendation without client names, recordings, screenshots, or public publishing.
+- [x] Add a separate, revocable student-owned consent record before identifiable client information can be attached to any future content workflow; do not build publishing or social scheduling.
+- [x] Test routing priority, tenant isolation, booking-link allowlisting, private brief access, reviewable proposal creation, identifier redaction, and no-publication boundaries.
+- [x] Explicitly exclude calendar infrastructure, video recording, YouTube publishing, social scheduling, video editing, marketplace/payouts, complex content analytics, and automatic conversion of private material to public content.
+- [x] Add Pack-aware first-run state detection so assigned students see the Pack destination/Point B and a minimal Point A diagnostic instead of the generic goal field.
+- [x] Derive candidate Point A questions only from approved Pack milestones, diagnostic/decision rules, known progress, imported learning, connected CRM data, prior Skoots, and outcomes; ask one question at a time and stop when sufficient context exists.
+- [x] Retain the generic three-step outcome → bottleneck → next Skoot flow only for users without an active assigned Creator Pack.
+- [x] Restructure returning-student hierarchy so Destination, small milestone progress, one dominant Next Skoot, optional supporting action, Need help, and quiet Not Today content appear before chat or advanced controls.
+- [x] Move open-ended Skoot chat, prompt composition, Pack configuration, learning import, CRM connections, and specialist setup below the first decision or behind progressive disclosure.
+- [x] Extend Creator Pack knowledge with optional transformation/destination and ordered milestone diagnostic prompts without asking students to understand Pack internals.
+- [x] Add a deterministic Smart Escalation route that checks Pack capability, then CSM, then Main Coach based on explicit help request, persistent action attempts, and strategy/diagnosis needs.
+- [x] Add a private student Book Breakdown action using an active authorized support booking URL, and a safe request-for-help state when no booking URL exists.
+- [x] Add a private Creator/assigned-CSM queue with student-authorized breakdown links, pre-call briefs, post-call note capture, reviewable Pack update proposals, and suggested client follow-up Skoot text.
+- [x] Extend private Creator intelligence with anonymous aggregation of recurring bottlenecks, question categories, possible misconceptions, skipped Skoots, outcomes, and escalation requests.
+- [x] Surface private Content Skoot opportunities only from aggregated patterns or a creator-reviewed breakdown, defaulting all references to anonymized language with no publishing action.
+- [x] Add a separate identifiable-content-consent record requirement for any future use of names, recordings, screenshots, results, or private business information; keep publishing and identifiable-content workflows out of scope for this release.
+- [x] Produce a copy-ready Manus Agent prompt for a guided first-run UX redesign that leads with outcome, bottleneck, and one decisive Skoot before exposing advanced tools.
+- [x] Diagnose the reported GoDaddy redirect: authoritative Namecheap DNS and independent public resolvers currently point the apex and www hosts to cname.manus.space; the screenshot shows Chrome already on a separate forsale.godaddy.com URL.
+- [x] Confirm there is no current registrar DNS or forwarding conflict to remove and leave all existing email MX/TXT records unchanged.
+- [x] Verify skootly.com and www.skootly.com independently resolve to the current Skootly release over HTTPS with valid IPv4 and IPv6 answers.
+- [x] Confirm the corrected direct URL in the user's Chrome session after bypassing its cached GoDaddy history/autocomplete entry; the user reached Skootly and reported its Manus login screen.
+- [x] Audit the current Manus authentication, session cookie, user schema, and existing-user compatibility requirements before introducing credentials.
+- [x] Add a secure isolated password-credential schema and additive migration without exposing hashes or breaking existing tenant-owned records.
+- [x] Implement email registration and login procedures with normalized email, 12-character password validation, bounded errors, repeated-attempt blocking, scrypt hashing, and existing signed session-cookie issuance.
+- [x] Preserve logout and user-ID tenant isolation while providing an Account flow for existing Manus-authenticated users to add or change a Skootly password.
+- [x] Replace Manus-only sign-in calls with a branded Skootly email registration/login screen, responsive validation states, and a clearly secondary legacy Manus account-linking path.
+- [x] Add authentication tests for registration, duplicate email handling, invalid credentials, password hashing, session issuance, logout, repeated-attempt blocking, and authenticated existing-user password attachment.
+- [x] Apply the credential migration, run TypeScript/tests/build, visually verify desktop/mobile authentication, save checkpoint 1b8499ce, and verify the live skootly.com bundle contains the new credential routes and UI.
+- [x] Audit the recovered live Creator Pack, authentication, recommendation, outcome, and support foundations against the approved P0 coach workflow.
+- [x] Add guided Pack Builder templates for 5-Day Challenge and Client Implementation, producing editable destination, audience, 3–7 milestones, default Skoots, feedback prompts, user-provided HTTPS resource links, asset specifications, and Not-Today boundaries.
+- [x] Require explicit creator review and immutable Pack-version approval before a Pack Builder draft changes student guidance.
+- [x] Add revocable, expiring, single-use enrollment invitations tied to one Pack/version and a copyable secure enrollment link; do not send email until verification and a transactional-email integration are in place.
+- [x] Add Pack-branded student acceptance and enrollment states that let a signed-in or new email/password user join only their invited Pack version.
+- [x] Add a student Pack path with a quiet milestone rail, one current primary Skoot, at most one supporting Skoot, definition of done, and Done/Stuck/Not Today feedback.
+- [x] Add private coach visibility into enrolled students’ state, current milestone, and explicit stuck/help signals without exposing student conversations or building analytics dashboards.
+- [x] Define a deliberate Pack-version rollout policy: new enrollments receive the active version while active students remain on their enrolled version unless the creator explicitly changes their rollout.
+- [x] Apply the migration and add regression tests for opaque invite tokens, expiration behavior, authenticated ownership forwarding, Pack-version approval, action caps, and feedback ownership; database helpers enforce creator/student ownership and token/email matching.
+- [x] Run TypeScript, 79 passing tests with one optional HighLevel live-credential test skipped, production build, and desktop/mobile creator, existing student, login, and unavailable-invite state verification; save and verify the published MVP checkpoint.
+- [x] Audit Pack Builder friction and identify the smallest creator-facing changes that make it easy to convert an existing coaching method into a launch-ready Pack.
+- [x] Add a guided “shape my Pack” intake that converts a coach’s plain-language, non-sensitive method notes into an editable Pack draft with a destination, milestones, Skoots, definition of done, feedback prompts, and Not-Today boundaries.
+- [x] Add a coach-friendly review step that highlights only the decisions requiring attention before immutable version approval and invite creation.
+- [x] Research current ChatGPT app/connector submission, OAuth, privacy, metadata, testing, and review requirements from official OpenAI documentation.
+- [x] Define a submission-ready “Manage Client Success Through Chat” integration scope with least-privilege OAuth, client-success read tools, confirmed write contracts, tenant isolation, and no background data access.
+- [x] Create the MCP-compatible read-only tool contract, data-minimization requirements, user-facing setup copy, test plan, and store-listing draft required for a future ChatGPT app submission.
+- [x] Implement and verify the Pack Builder usability changes with TypeScript, 81 passing tests, a production build, and managed-project visual review; managed publishing can proceed while personal browser control remains paused.
+- [x] Keep control of the user’s browser paused for this release work; no personal-browser navigation was performed after the pause request, and future browser control still requires explicit user resumption.
+- [x] Audit the current creator invitation, email/password onboarding, isolated-workspace, Pack Builder, and student-preview foundations before adding creator invitations.
+- [x] Add secure revocable, expiring, single-use creator invitations that bind to one exact normalized email and create no shared access to the inviter’s Packs, students, conversations, or support queue.
+- [x] Add a creator invite acceptance page that routes new invitees through email/password account creation or sign-in and then marks their independent creator workspace ready.
+- [x] Add a clear Creator launch sequence showing only: shape or choose a Pack, review the student experience, approve a version, and invite the first student.
+- [x] Add a student-view Pack preview that renders the current editable draft’s destination, milestone rail, one primary Skoot, optional support action, definition of done, feedback choices, resource links, and Not-Today boundary before approval.
+- [x] Add regression tests for creator-invite opacity, authenticated email forwarding, owner-only invite listing/revocation, independent workspace isolation, and preview action limits; database helpers enforce token hashing, expiry, single use, email matching, and inviter-only access.
+- [x] Run TypeScript, 86 passing tests with one optional HighLevel live-credential test skipped, production build, and desktop/mobile Creator invitation/preview verification before saving and checking the published release.
+- [x] Audit the existing external integration contracts, Pack execution helpers, public server boundaries, credential model, and current MCP guidance before exposing a remote MCP endpoint.
+- [x] Define an initial least-privilege Pack MCP tool set: read active Pack, read current next Skoot, read milestone progress, and prepare explicit Done/Stuck/Not Today feedback with no automatic writes.
+- [x] Add durable user-controlled connection authorization, revocation, one-hour token expiry, scope binding, and OAuth 2.1 authorization-code/PKCE requirements for compatible third-party ChatGPT and Manus connections.
+- [x] Implement an MCP-compatible HTTPS endpoint with protected-resource discovery, tool discovery, schema validation, structured JSON-RPC errors, tenant-bound authorization, and no raw student conversations, credentials, private imports, or unrelated-client data.
+- [x] Implement explicit two-step confirmation before recording Pack feedback from an external agent and preserve user ownership, enrolled Pack, version, and milestone context for every accepted external action.
+- [x] Create ChatGPT and Manus setup guidance that accurately states which provider/account steps remain required and does not claim public marketplace availability before provider review.
+- [x] Add protocol, scope, PKCE, trusted-origin, tool-schema, confirmation, revocation-control, and feedback-ownership regression coverage; run TypeScript, 85 passing tests with one optional HighLevel live-credential test skipped, a production build, and desktop/mobile managed-preview verification.
+- [x] Keep the MCP integration limited to user-authorized Skootly Pack data and explicit feedback; do not add Skool scraping, a browser extension, automated module capture, or course-platform automation.
+- [ ] Perform a real provider-side connection test with the exact ChatGPT or Manus OAuth client metadata and redirect URI after the user explicitly resumes browser control; do not claim provider-specific compatibility before that test.
+- [x] Identify the correct OpenAI developer surface for configuring a remote MCP connection; no API keys or billing settings were changed.
+- [x] Enter and validate Skootly’s public MCP metadata where the provider supports it, retaining least-privilege scopes and no autonomous Pack writes.
+- [ ] Obtain confirmation before authorizing a live OAuth connection or saving/submitting a provider-side configuration.
+- [ ] Run the approved ChatGPT MCP connection test, record the outcome, and update setup guidance without publishing or widening access unless separately confirmed.
+- [x] Configure the verified OpenAI developer account’s MCP plugin draft with Skootly’s endpoint, OAuth selection, verified domain, and successfully scanned MCP tool inventory; final review fields remain user-controlled.
+- [x] Serve the OpenAI-issued one-time domain verification value only at Skootly’s required `/.well-known/openai-apps-challenge` path through a protected environment value, with an endpoint-level test that validates the configured response without logging the value.
+- [x] Publish and externally verify that the exact well-known challenge URL returns the provider-issued value over HTTPS before the user clicks Verify Domain; the response matches the managed provider value without logging it.
+- [x] Complete the OpenAI domain verification and scan Skootly’s declared MCP tools without authorizing a live user connection or submitting the plugin.
+- [x] Diagnose the reported ChatGPT OAuth error: ChatGPT’s Client ID Metadata Document advertises legacy `private_key_jwt` preference alongside supported methods including `none`, while Skootly previously treated the legacy field as exclusive.
+- [x] Update Skootly’s OAuth metadata, client registration, and authorization validation to support ChatGPT’s documented PKCE public-client method intersection, stable issuer identification, and exact callback validation without accepting arbitrary clients or weakening PKCE, redirect-URI, scope, or tenant checks.
+- [x] Add regression coverage for ChatGPT’s documented CIMD public-client pattern, retain rejection of private-key-only clients, and verify the exact client ID plus stable callback safely hand off to Skootly login locally.
+- [x] Publish the OAuth compatibility fix, verify it locally, and guide the user through a safe Scan Tools retry; the OpenAI tool scan completed without submitting the plugin or authorizing Pack access.
+- [x] Review the uploaded Coach onboarding adjustments document and map its recommendations to the current Skootly Creator/Coach Pack workflow.
+- [x] Produce an approval-ready Coach onboarding proposal for skootly.com, covering role entry, first-session outcome, method capture, Pack review, version approval, and first student invitation.
+- [x] Identify the exact MVP additions, deferrals, data/privacy safeguards, and decision points before any Coach onboarding implementation begins; implementation is blocked until the user explicitly says go.
+- [x] Audit the existing authentication, Creator Pack Builder, creator workspace, user profile, student invitation, and onboarding route foundations for the approved Coach first-session flow.
+- [x] Add a Coach/Creator versus student role selection immediately after new account registration without disrupting existing accounts or current invitation acceptance routes.
+- [x] Add a focused Coach identity and offer/outcome capture step with optional public avatar/logo URL, audience, and first-Pack template choice.
+- [x] Add a compliant method-capture step for coach-provided notes, client-side extracted text/PDF/worksheet/SOP files, or a guided template; prohibit third-party scraping and require an explicit no-private-data confirmation before Pack shaping.
+- [x] Connect the onboarding draft to the existing Shape my Pack flow, with an editable 3–7-milestone Pack and no auto-approval.
+- [x] Add a compact review checklist, student-view preview, immutable version approval, and launch sequence that leads directly to the first student invitation.
+- [x] Persist onboarding state and completion safely per user, add authenticated Coach onboarding router coverage, and preserve current Pack creation, approval gating, invitation access, student version pinning, and existing-user compatibility.
+- [x] Run TypeScript, 89 passing tests with one optional HighLevel live-credential test skipped, production build, and desktop/mobile onboarding entry verification; checkpoint and live-release verification remain next.
+- [ ] Authorize ChatGPT only against the isolated fictional Skootly reviewer account with least-privilege Pack scopes; do not use personal data or submit the plugin.
+- [ ] Run and document the five approved reviewer MCP cases through the provider-connected workflow, preserving explicit confirmation for all feedback writes.
+- [ ] Request separate user confirmation before any OpenAI plugin submission after the isolated connection test is complete.
+- [x] Diagnose why the published Coach onboarding route is not surfaced to the existing signed-in user: pre-existing accounts have no onboarding row, so `/creator` previously fell directly through to the legacy configuration-first workspace.
+- [x] Route a signed-in user with no chosen onboarding role into the Coach/Creator role-and-Pack setup flow without interrupting student enrollment or completed Coach workspaces.
+- [x] Add a visually dominant Creator launch entry for existing users through the dedicated role screen’s “Set up my first Pack” action and a safe “Test Coach setup again” replay entry for established creators.
+- [x] Verify the existing-user route behavior on desktop/mobile, TypeScript, 90 passing tests with one optional HighLevel live-credential test skipped, and a clean production build; the published bundle now contains the corrected onboarding redirect, safe replay, and one-creator pilot controls.
+- [x] Audit existing onboarding state, creator invitations, and account ownership for a safe one-creator pilot.
+- [x] Add a user-owned Coach onboarding rehearsal that can be started and reset without deleting existing Packs, students, outcomes, or creator workspace data.
+- [x] Add a one-creator pilot invitation path that creates one independent, email-matched creator workspace with no access to the inviter’s or other creators’ data.
+- [x] Add compact pilot status directly in Creator launch: one active pilot blocks another creation, while the invite list displays pending, accepted, revoked, or expired state.
+- [x] Add user-ownership regression coverage for replay and pilot invitation forwarding; database helpers enforce the one-active-pilot limit, exact email matching, expiry, revocation, and isolated workspace creation. Run TypeScript, the full suite, build, responsive desktop/mobile entry verification, checkpoint, and confirm the published bundle after propagation.
+- [x] Diagnose and fix the mobile Coach onboarding “Shape my first Pack” error (`undefined is not a function`) for pasted method notes, without changing the approved onboarding flow.
+- [x] Diagnose and fix the mobile corner Skoot/chatbot open interaction so the control and its panel remain reachable, visible, and usable above mobile browser UI.
+- [x] Add targeted regression coverage, verify both exact iPhone-sized interaction paths, run TypeScript/tests/build, and publish only the corrected mobile behaviors.
